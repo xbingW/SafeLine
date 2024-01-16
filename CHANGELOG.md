@@ -1,5 +1,43 @@
 # SAFELINE-CE CHANGELOG
 
+## [4.1.1] - 2024-01-11
+
+### 修复
+
+- 修复 IP 组在线订阅失败时会保存错误内容的问题
+
+## [4.1.0] - 2024-01-11
+
+### 新增
+
+- 拦截日志一键复制为 cURL （[#531](https://github.com/chaitin/SafeLine/issues/531)）
+
+### 优化
+
+- IP 组若为在线订阅，显示更新时间（[#574](https://github.com/chaitin/SafeLine/issues/574)）
+- 优化 safeline-fvm 容器重启速度，重启时间减少 10s
+- 优化 safeline-mgt 容器镜像层数，从 39 层下降到 24 层
+
+### 修复
+
+- 修复日志列表 IP 来源地区未翻译国家编号的问题（[#578](https://github.com/chaitin/SafeLine/issues/578)）
+- 修复英文翻译问题（[#591](https://github.com/chaitin/SafeLine/issues/591)）
+- 修复雷池管理后台证书更新后未自动重启问题
+
+## [4.0.2] - 2024-01-06
+
+### 修复
+
+- 管理后台 mgt 启动时提示证书异常
+- 统计页面中 QPS 数据统计方法由窗口时间（5s）改为按秒计算平均值
+
+## [4.0.1] - 2024-01-05
+
+### 修复
+
+- safeline-luigi 容器打印与功能无关的错误日志
+- 统计页面中不显示 QPS 数据
+
 ## [4.0.0] - 2024-01-05
 
 ### 新增

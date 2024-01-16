@@ -16,13 +16,13 @@ title: "防护问题"
 
 雷池部署在内网的师傅需要加白一下，就可以正常同步情报数据了。
 
-## 如何记录所有访问雷池的请求
+## 如何记录所有访问雷池的请求 （如何开启访问日志）
 
 默认情况下雷池是并不会保存请求记录的，如果需要保存请求记录，可以修改安装路径下的**resources/nginx/nginx.conf**
 
 ![config_access_log.png](/images/docs/config_access_log.png)
 
-如图所示，去掉文件第 99 行的注释，删除第 100 行的内容，保存后运行命令检查配置文件
+如图所示，去掉文件第 98 行的注释，删除第 99 行的内容，保存后运行命令检查配置文件
 
 ```shell
 docker exec safeline-tengine nginx -t
