@@ -6,14 +6,49 @@ title: "版本更新记录"
 
 [版本升级方法](/guide/upgrade)
 
+### [4.3.2] - 2024-02-06
+
+#### 修复
+
+- 修复“内置规则”服务 IP 地址无法访问的问题，使用容器名称代替固定 IP
+
+### [4.3.1] - 2024-02-05
+
+#### 优化
+
+- 修改日志详接口地址，避免被浏览器插件误拦
+
+#### 修复
+
+- 修复日志详情中，“补充规则” 的防护模块名字未正确显示的问题
+- 修复有时候添加 http 站点后，站点会错误地显示到 证书管理->使用站点 处的问题（[#656](https://github.com/chaitin/SafeLine/issues/656)）
+
+### [4.3.0] - 2024-02-02
+
+#### 新增
+
+- 新增 防护配置 - 身份认证，可以给防护的网站加上用户名密码验证：
+
+  ![](/images/docs/about_changelog/4.3.0-1.png)
+
+- 新增智能 AI 请求分析。在 攻击事件 - 原始日志 - 日志详情 中，点击 “智能 AI 攻击分析”，就可以分析该请求的攻击特征和原理了：
+
+  ![](/images/docs/about_changelog/4.3.0-2.png)
+
+#### 优化
+
+- 优化英文英文模式下中国省份的显示（[#512](https://github.com/chaitin/SafeLine/issues/512)）
+- 优化站点的域名验证逻辑。当客户端发送了域名不正确的请求时，除了普通流量会被雷池直接拒绝之外，现在攻击流量也会被直接拒绝，不会返回拦截信息并记录日志了
+- 优化一些界面交互和 UI 细节
+
 ### [4.2.1] - 2024-01-19
 
 #### 新增
 
 - 点击右上角可领取 2023 专属年度报告:
-- ![](/images/docs/about_changelog/4.2.0-1.png)
+  ![](/images/docs/about_changelog/4.2.0-1.png)
 - 新增补充规则，可以一览系统当前的通用漏洞规则：
-- ![](/images/docs/about_changelog/4.2.0-2.png)
+  ![](/images/docs/about_changelog/4.2.0-2.png)
 - 黑白名单、人机验证新增匹配方式，包括：
   - IP 不等于
   - Host 不等于
@@ -76,7 +111,7 @@ title: "版本更新记录"
 
 - 完整支持 **流式语义分析检测**，包含 协议解析、解码、模式匹配 三个阶段的改造，解决经典 “大包绕过” 问题
 - IP 组支持通过 URL 在线订阅内容（[#414](https://github.com/chaitin/SafeLine/issues/414)）：
-- ![](/images/docs/about_changelog/ip_group_url.png)
+  ![](/images/docs/about_changelog/ip_group_url.png)
 - 新增 “搜索引擎爬虫 IP”，包含 Google、Bing、百度、360 的爬虫 IP（[#374](https://github.com/chaitin/SafeLine/issues/374)、[#399](https://github.com/chaitin/SafeLine/issues/399)）：
   ![](/images/docs/about_changelog/ip_group_builtin.png)
 - 出厂预置 “搜索引擎爬虫白名单” 和 “长亭社区恶意 IP 情报黑名单”，方便配置
@@ -146,7 +181,7 @@ title: "版本更新记录"
 #### 新增
 
 - 右上角增加 “更多工具”，方便快速访问牧云主机助手、百川网站监测等常用运维管理工具
-- ![](/images/docs/about_changelog/moretools.png)
+  ![](/images/docs/about_changelog/moretools.png)
 
 #### 优化
 
@@ -168,7 +203,7 @@ title: "版本更新记录"
 #### 新增
 
 - 新增 502、504 页面。网站服务器异常、配置有误时，能给网站用户提供更清晰友好的说明
-- ![](/images/docs/about_changelog/502_page.png)
+  ![](/images/docs/about_changelog/502_page.png)
 - 拦截页面支持英文，根据客户端语言自动切换
 
 #### 优化
@@ -210,8 +245,7 @@ title: "版本更新记录"
 #### 新增
 
 - 人机验证的二次验证，从数字验证码改为旋转图片，网站用户体验更好：
-
-- ![](/images/docs/about_changelog/cs_verify_image.png)
+  ![](/images/docs/about_changelog/cs_verify_image.png)
 
 #### 优化
 
